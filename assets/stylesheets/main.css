@@ -276,9 +276,9 @@ body {
   width: 100%;
   padding: 1rem;
   color: #fbfafc;
-  background: -webkit-linear-gradient(-45deg, #745a9e 0, #574d8a 100%);
-  background: -moz-linear-gradient(135deg, #745a9e 0, #574d8a 100%);
-  background: linear-gradient(135deg, #745a9e 0, #574d8a 100%);
+  background: -webkit-linear-gradient(-45deg, #71459e 0, #4b3f8a 100%);
+  background: -moz-linear-gradient(135deg, #71459e 0, #4b3f8a 100%);
+  background: linear-gradient(135deg, #71459e 0, #4b3f8a 100%);
   background-position: 50% 50%;
   -webkit-background-origin: padding-box;
   background-origin: padding-box;
