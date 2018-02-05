@@ -163,14 +163,17 @@ body {
 }
 
 .flip {
-  backface-visibility: hidden !important;
-  animation: 1s flip forwards;
+  -webkit-backface-visibility: hidden !important;
+          backface-visibility: hidden !important;
+            -webkit-animation: 1s flip forwards;
+                    animation: 1s flip forwards;
 }
 
 @keyframes flip {
   0% {
     opacity: 1;
-    transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
   }
 
   25% {
@@ -179,7 +182,8 @@ body {
 
   50% {
     opacity: 0;
-    transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
   }
 
   75% {
@@ -187,24 +191,29 @@ body {
   }
 
   80% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
   }
 
   90% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -345deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -345deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -345deg);
   }
 
   95% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
   }
 
   97% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -355deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -355deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -355deg);
   }
 
   100% {
     opacity: 1;
-    transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
   }
 }
 
