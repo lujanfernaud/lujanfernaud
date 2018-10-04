@@ -41,8 +41,8 @@ $very-large-devices: 1199px;
   }
 }
 
-@mixin media-iphone-large {
-  @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@mixin media-iphone-large--portrait {
+  @media only screen and (min-device-width: 812px) and (max-device-height: 375px) and (-webkit-device-pixel-ratio: 3) {
       @content;
   }
 }
@@ -254,17 +254,25 @@ body {
   justify-content: space-between;
   position: absolute;
   bottom: 1.54rem;
-  left: calc(50% - 4.35rem); // 50% minus half of the width.
-  width: 8.7rem;
+  width: 74%;
+  max-width: 345px;
 
   @include media($medium-devices) {
     bottom: 2.2rem;
-    left: calc(50% - 5.55rem); // 50% minus half of the width.
-    width: 11.1rem;
+    width: 40%;
   }
 
-  @include media-iphone-large {
-    bottom: 2.1rem;
+  @include media($large-devices) {
+    width: 29%;
+  }
+
+  @include media($very-large-devices) {
+    width: 22%;
+  }
+
+  @include media-iphone-large--portrait {
+    bottom: 1.5rem;
+    width: 38%;
   }
 }
 
@@ -287,10 +295,18 @@ body {
 }
 
 .icon {
-  width: 1.5rem;
+  width: 1.65rem;
   color: transparent;
 
   @include media($medium-devices) {
-    width: 1.7rem;
+    width: 1.85rem;
+  }
+
+  @include media($very-large-devices) {
+    width: 2rem;
+  }
+
+  @include media-iphone-large--portrait {
+    width: 1.65rem;
   }
 }
