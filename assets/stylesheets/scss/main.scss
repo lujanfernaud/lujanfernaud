@@ -41,7 +41,7 @@ $very-large-devices: 1199px;
   }
 }
 
-@mixin background-gradient {
+@mixin background-linear-gradient {
   background: -webkit-linear-gradient(-45deg, $background-color-1 0, $background-color-2 100%);
   background: -moz-linear-gradient(135deg, $background-color-1 0, $background-color-2 100%);
   background: linear-gradient(135deg, $background-color-1 0, $background-color-2 100%);
@@ -54,6 +54,12 @@ $very-large-devices: 1199px;
   background-size: auto auto;
 }
 
+@mixin background-radial-gradient {
+  background: $background-color-1;
+  background: -webkit-radial-gradient(center, $background-color-1, rgba($background-color-2, .9));
+  background: -moz-radial-gradient(center, $background-color-1, rgba($background-color-2, .9));
+  background: radial-gradient(ellipse at center, $background-color-1, rgba($background-color-2, .9));
+}
 
 // Initial Setup
 
@@ -99,7 +105,7 @@ body {
   width: 100%;
   padding: 1rem;
   color: $font-color;
-  @include background-gradient;
+  @include background-radial-gradient;
 
   @include media($very-large-devices) {
     width: 100vw;

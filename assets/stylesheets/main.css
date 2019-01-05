@@ -224,16 +224,10 @@ body {
   width: 100%;
   padding: 1rem;
   color: #2e281f;
-  background: -webkit-linear-gradient(-45deg, #e4c499 0, #CCAF89 100%);
-  background: -moz-linear-gradient(135deg, #e4c499 0, #CCAF89 100%);
-  background: linear-gradient(135deg, #e4c499 0, #CCAF89 100%);
-  background-position: 50% 50%;
-  -webkit-background-origin: padding-box;
-  background-origin: padding-box;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  -webkit-background-size: auto auto;
-  background-size: auto auto; }
+  background: #e4c499;
+  background: -webkit-radial-gradient(center, #e4c499, rgba(204, 175, 137, 0.9));
+  background: -moz-radial-gradient(center, #e4c499, rgba(204, 175, 137, 0.9));
+  background: radial-gradient(ellipse at center, #e4c499, rgba(204, 175, 137, 0.9)); }
   @media (min-width: 1199px) {
     .cover {
       width: 100vw; } }
