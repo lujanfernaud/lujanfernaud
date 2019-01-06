@@ -105,7 +105,7 @@ body {
   width: 100%;
   padding: 1rem;
   color: $font-color;
-  @include background-radial-gradient;
+  background-color: $background-color-1;
 
   @include media($very-large-devices) {
     width: 100vw;

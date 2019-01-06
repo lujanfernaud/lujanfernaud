@@ -224,10 +224,7 @@ body {
   width: 100%;
   padding: 1rem;
   color: #2e281f;
-  background: #e4c499;
-  background: -webkit-radial-gradient(center, #e4c499, rgba(204, 175, 137, 0.9));
-  background: -moz-radial-gradient(center, #e4c499, rgba(204, 175, 137, 0.9));
-  background: radial-gradient(ellipse at center, #e4c499, rgba(204, 175, 137, 0.9)); }
+  background-color: #e4c499; }
   @media (min-width: 1199px) {
     .cover {
       width: 100vw; } }
