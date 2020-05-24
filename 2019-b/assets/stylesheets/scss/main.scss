@@ -1,0 +1,311 @@
+@import 'normalize';
+
+// Variables
+
+$dejavu-serif: 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif;
+$dejavu-sans: 'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref',
+  sans-serif;
+
+$background-color-1: #71459e;
+$background-color-2: #4b3f8a;
+
+$font-color: #fbfafc;
+$white: #fff;
+
+$small-devices: 479px;
+$medium-devices: 767px;
+$large-devices: 991px;
+$very-large-devices: 1199px;
+
+// Mixins
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin media($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-iphone-large--portrait {
+  @media only screen and (min-device-width: 812px) and (max-device-height: 375px) and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+}
+
+@mixin background-linear-gradient {
+  background: -webkit-linear-gradient(-45deg, $background-color-1 0, $background-color-2 100%);
+  background: -moz-linear-gradient(135deg, $background-color-1 0, $background-color-2 100%);
+  background: linear-gradient(135deg, $background-color-1 0, $background-color-2 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+}
+
+@mixin background-radial-gradient {
+  background: $background-color-1;
+  background: -webkit-radial-gradient(center, $background-color-1, rgba($background-color-2, 0.9));
+  background: -moz-radial-gradient(center, $background-color-1, rgba($background-color-2, 0.9));
+  background: radial-gradient(
+    ellipse at center,
+    $background-color-1,
+    rgba($background-color-2, 0.9)
+  );
+}
+
+// Initial Setup
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $dejavu-serif;
+  font-size: 18px;
+  color: #303030;
+
+  @include media($medium-devices) {
+    font-size: 22px;
+  }
+
+  @include media($large-devices) {
+    font-size: 26px;
+  }
+
+  @include media($very-large-devices) {
+    font-size: 32px;
+  }
+}
+
+.main-container {
+  @include flex-column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+// Cover
+
+.cover {
+  @include flex-column;
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  color: $font-color;
+  @include background-linear-gradient;
+
+  @include media($very-large-devices) {
+    width: 100vw;
+  }
+}
+
+.cover-name-container {
+  position: relative;
+  cursor: help;
+}
+
+.name-question-mark {
+  position: absolute;
+  top: -1.85rem;
+  right: calc(50% - 1.4rem);
+  padding: 1rem 1rem 1.5rem 1rem;
+  font-size: 1rem;
+  opacity: 0.55;
+  transition: opacity 0.5s;
+
+  @include media($medium-devices) {
+    top: -0.8rem;
+    right: -3.5rem;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  @include media($large-devices) {
+    top: 0;
+    right: -4rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.opacity-hidden {
+  opacity: 0;
+}
+
+.cover-name {
+  position: relative;
+  margin-bottom: 0.7rem;
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.5s;
+
+  @include media($medium-devices) {
+    font-size: 4rem;
+  }
+
+  @include media($large-devices) {
+    font-size: 5rem;
+  }
+}
+
+.flip {
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  -webkit-animation: 1s flip forwards;
+  animation: 1s flip forwards;
+}
+
+@keyframes flip {
+  0% {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+  }
+
+  90% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -345deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -345deg);
+  }
+
+  95% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+  }
+
+  97% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -355deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -355deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -360deg);
+  }
+}
+
+.hr-small {
+  width: 13.1rem;
+  height: 2px;
+  background-color: $font-color;
+  border: 0;
+
+  @include media($medium-devices) {
+    width: 17rem;
+  }
+
+  @include media($large-devices) {
+    width: 19.6rem;
+    margin: 1.1rem;
+  }
+}
+
+.cover-short-description {
+  margin-top: 0.88rem;
+  font-family: $dejavu-sans;
+  font-size: 1.2rem;
+
+  @include media($medium-devices) {
+    margin-top: 1.15rem;
+    font-size: 1.7rem;
+  }
+
+  @include media($large-devices) {
+    margin-top: 1.33rem;
+    font-size: 2.1rem;
+  }
+}
+
+.cover-icons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 1.54rem;
+  width: 76%;
+  max-width: 345px;
+
+  @include media($medium-devices) {
+    bottom: 2.2rem;
+    width: 42%;
+  }
+
+  @include media($large-devices) {
+    width: 31%;
+  }
+
+  @include media($very-large-devices) {
+    width: 22%;
+    max-width: 345px;
+  }
+
+  @include media-iphone-large--portrait {
+    bottom: 1.5rem;
+    width: 40%;
+  }
+}
+
+.link-icon {
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  opacity: 0.71;
+  transition: opacity 0.2s;
+
+  @include media($medium-devices) {
+    padding-bottom: 0;
+  }
+}
+
+.link-icon:hover,
+.link-icon:focus {
+  opacity: 1;
+}
+
+.icon {
+  width: 1.8rem;
+  color: transparent;
+
+  @include media($medium-devices) {
+    width: 2.1rem;
+  }
+
+  @include media($very-large-devices) {
+    width: 2rem;
+  }
+
+  @include media-iphone-large--portrait {
+    width: 1.8rem;
+  }
+}
