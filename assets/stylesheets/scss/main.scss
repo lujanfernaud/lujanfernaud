@@ -1,10 +1,9 @@
-@import 'normalize';
+@import "normalize";
 
 // Variables
 
-$dejavu-serif: 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif;
-$dejavu-sans: 'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref',
-  sans-serif;
+$dejavu-serif: "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$dejavu-sans: "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 
 $background-color-1: #71459e;
 $background-color-2: #4b3f8a;
@@ -55,11 +54,7 @@ $very-large-devices: 1199px;
   background: $background-color-1;
   background: -webkit-radial-gradient(center, $background-color-1, rgba($background-color-2, 0.9));
   background: -moz-radial-gradient(center, $background-color-1, rgba($background-color-2, 0.9));
-  background: radial-gradient(
-    ellipse at center,
-    $background-color-1,
-    rgba($background-color-2, 0.9)
-  );
+  background: radial-gradient(ellipse at center, $background-color-1, rgba($background-color-2, 0.9));
 }
 
 // Initial Setup
@@ -113,30 +108,6 @@ body {
 .cover-name-container {
   position: relative;
   cursor: help;
-}
-
-.name-question-mark {
-  position: absolute;
-  top: -1.85rem;
-  right: calc(50% - 1.4rem);
-  padding: 1rem 1rem 1.5rem 1rem;
-  font-size: 1rem;
-  opacity: 0.55;
-  transition: opacity 0.5s;
-
-  @include media($medium-devices) {
-    top: -0.8rem;
-    right: -3.5rem;
-    padding: 1.5rem;
-    font-size: 1.4rem;
-  }
-
-  @include media($large-devices) {
-    top: 0;
-    right: -4rem;
-    padding: 1.5rem;
-    font-size: 1.5rem;
-  }
 }
 
 .opacity-hidden {
