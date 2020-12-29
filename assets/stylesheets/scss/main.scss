@@ -5,10 +5,10 @@
 $dejavu-serif: "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 $dejavu-sans: "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 
-$background-color-1: #71459e;
-$background-color-2: #4b3f8a;
+$background-color-1: #f8f3ed;
+$background-color-2: #ece2d9;
 
-$font-color: #fbfafc;
+$font-color: #2e2d2b;
 $white: #fff;
 
 $small-devices: 479px;
@@ -264,9 +264,34 @@ body {
   opacity: 1;
 }
 
+.link-icon-exercism {
+  position: relative;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 8px;
+  background-color: $font-color;
+  border-radius: 100%;
+
+  @include media($medium-devices) {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  @include media($very-large-devices) {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  @include media-iphone-large--portrait {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
 .icon {
   width: 1.8rem;
   color: transparent;
+  fill: $font-color;
 
   @include media($medium-devices) {
     width: 2.1rem;
@@ -279,4 +304,13 @@ body {
   @include media-iphone-large--portrait {
     width: 1.8rem;
   }
+}
+
+.icon-exercism {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px;
+  z-index: 2;
+  fill: $background-color-2;
 }
