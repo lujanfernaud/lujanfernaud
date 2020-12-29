@@ -223,7 +223,7 @@ body {
   height: 100vh;
   width: 100%;
   padding: 1rem;
-  color: #2e2d2b;
+  color: #3b3a37;
   background: -webkit-linear-gradient(-45deg, #f8f3ed 0, #ece2d9 100%);
   background: -moz-linear-gradient(135deg, #f8f3ed 0, #ece2d9 100%);
   background: linear-gradient(135deg, #f8f3ed 0, #ece2d9 100%);
@@ -296,7 +296,7 @@ body {
 .hr-small {
   width: 13.1rem;
   height: 2px;
-  background-color: #2e2d2b;
+  background-color: #3b3a37;
   border: 0; }
   @media (min-width: 767px) {
     .hr-small {
@@ -362,7 +362,7 @@ body {
   width: 2rem;
   height: 2rem;
   margin-top: 8px;
-  background-color: #2e2d2b;
+  background-color: #3b3a37;
   border-radius: 100%; }
   @media (min-width: 767px) {
     .link-icon-exercism {
@@ -380,7 +380,7 @@ body {
 .icon {
   width: 2rem;
   color: transparent;
-  fill: #2e2d2b; }
+  fill: #3b3a37; }
   @media (min-width: 767px) {
     .icon {
       width: 2.3rem; } }

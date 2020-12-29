@@ -8,7 +8,7 @@ $dejavu-sans: "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, 
 $background-color-1: #f8f3ed;
 $background-color-2: #ece2d9;
 
-$font-color: #2e2d2b;
+$font-color: lighten(#2e2d2b, 5%);
 $white: #fff;
 
 $small-devices: 479px;
