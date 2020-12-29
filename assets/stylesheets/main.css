@@ -359,37 +359,37 @@ body {
 
 .link-icon-exercism {
   position: relative;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2rem;
+  height: 2rem;
   margin-top: 8px;
   background-color: #2e2d2b;
   border-radius: 100%; }
   @media (min-width: 767px) {
     .link-icon-exercism {
-      width: 2.1rem;
-      height: 2.1rem; } }
+      width: 2.3rem;
+      height: 2.3rem; } }
   @media (min-width: 1199px) {
+    .link-icon-exercism {
+      width: 2.2rem;
+      height: 2.2rem; } }
+  @media only screen and (min-device-width: 812px) and (max-device-height: 375px) and (-webkit-device-pixel-ratio: 3) {
     .link-icon-exercism {
       width: 2rem;
       height: 2rem; } }
-  @media only screen and (min-device-width: 812px) and (max-device-height: 375px) and (-webkit-device-pixel-ratio: 3) {
-    .link-icon-exercism {
-      width: 1.8rem;
-      height: 1.8rem; } }
 
 .icon {
-  width: 1.8rem;
+  width: 2rem;
   color: transparent;
   fill: #2e2d2b; }
   @media (min-width: 767px) {
     .icon {
-      width: 2.1rem; } }
+      width: 2.3rem; } }
   @media (min-width: 1199px) {
     .icon {
-      width: 2rem; } }
+      width: 2.2rem; } }
   @media only screen and (min-device-width: 812px) and (max-device-height: 375px) and (-webkit-device-pixel-ratio: 3) {
     .icon {
-      width: 1.8rem; } }
+      width: 2rem; } }
 
 .icon-exercism {
   position: absolute;
