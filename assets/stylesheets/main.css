@@ -239,8 +239,7 @@ body {
       width: 100vw; } }
 
 .cover-name-container {
-  position: relative;
-  cursor: help; }
+  position: relative; }
 
 .opacity-hidden {
   opacity: 0; }
